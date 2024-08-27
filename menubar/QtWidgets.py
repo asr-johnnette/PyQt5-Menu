@@ -9,14 +9,15 @@ class SimpleWindow(QWidget):
     def initUI(self):
         # Set window title and size
         self.setWindowTitle('Simple QWidget Example')
-        self.setGeometry(300, 300, 300, 200)
+        self.setGeometry(300, 300, 200, 200)
 
         # Create widgets
         self.label = QLabel('Enter your name:')
         self.name_input = QLineEdit()
-        self.name_input.setFixedWidth(200)
+        self.name_input.setMinimumWidth(100)
+        self.name_input.setMaximumWidth(300)
         self.greet_button = QPushButton('Greet')
-        self.greet_button.setFixedWidth(200)
+        self.greet_button.setFixedWidth(100)
         self.greeting_label = QLabel('')
 
         # Create layout and add widgets
